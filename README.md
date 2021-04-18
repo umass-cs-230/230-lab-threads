@@ -27,7 +27,7 @@ are:
  `acc_right`, alternating the direction to be incremented across all threads.
  For each thread, the number of times `acc_left` is incremented plus the number
  of times `acc_right` is incremented is given by `argp->N`. It sleeps for
- `argp->T` microseconds each time `acc_left` or `acc_right is incremented.
+ `argp->T` microseconds each time `acc_left` or `acc_right` is incremented.
 
 * `count_down`: This function increments `acc_down` until the total number of
  times `acc_down` is incremented by all threads reaches the pre-determined value
