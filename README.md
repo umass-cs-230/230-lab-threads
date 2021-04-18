@@ -8,7 +8,7 @@ To start working on this lab you must be logged in to the Edlab and in your
 $ git clone https://github.com/umass-cs-230/230-lab-threads
 ```
 
-In the folder you just downloaded, you will find afolder `src`, as well as a
+In the folder you just downloaded, you will find a folder `src`, as well as a
 `Makefile`. In the `src` folder you are given a header file `challenge.h` and
 its associated C file `challenge.c`. All the work you need to do is in
 `src/challenge.c`. You are also given a file `main.c`, which has the `main()`
@@ -58,7 +58,7 @@ Every thread that locks eventually needs to unlock; every thread that unlocks
 needs be have acquired a lock prior. Consider all possible paths through
 conditionals and bear this in mind.
 
-Run the provided Makefile compile your code. The Makefile will also generate a
-`submission.zip` file, which is the file that you need to upload to Gradescope.
-This lab will be graded by a Gradescope autograder.
+Run the provided Makefile to compile your code. The Makefile will also generate
+a `submission.zip` file, which is the file that you need to upload to
+Gradescope.  This lab will be graded by a Gradescope autograder.
 
