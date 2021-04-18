@@ -15,7 +15,7 @@ do is in `src/challenge.c`. You are also given a file `main.c`, which has the
 `main()` function. This exists purely for your use for testing and debugging.
 
 The program keeps track of how many times each of the four "directions" have
-been counted. The variables that keep track of the counts are `acc_up`,
+been incremented. The variables that keep track of the counts are `acc_up`,
 `acc_down`, `acc_left`, and `acc_right`. The functions that increment the counts
 are:
 
@@ -31,7 +31,8 @@ are:
 
 * `count_down`: This function increments `acc_down` until the total number of
  times `acc_down` is incremented by all threads reaches the pre-determined value
- `val`. It also sleeps for `argp->T` each time `acc_down` is incremented.
+ `val`. It also sleeps for `argp->T` microseconds each time `acc_down` is
+ incremented.
 
 (Please see code for details if this description seems confusing.) 
 
