@@ -38,7 +38,7 @@ are:
 The majority of `count_up`, `count_split`, and `count_down` have already been
 implemented. Your task is to insert `lock();` and `unlock();` at the correct
 places in the code so that all the threads can modify shared variables in the
-manner described above, so that the changes made by all threads can be recorded
+manner described above, and the changes made by all threads can be recorded
 and race conditions avoided. You do not need to write any other code other than
 inserting `lock();` and `unlock();` lines.
 
