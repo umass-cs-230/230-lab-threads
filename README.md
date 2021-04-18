@@ -30,9 +30,8 @@ are:
  `argp->T` microseconds each time `acc_left` or `acc_right` is incremented.
 
 * `count_down`: This function increments `acc_down` until the total number of
- times `acc_down` is incremented by all threads reaches the pre-determined value
- `val`. It also sleeps for `argp->T` microseconds each time `acc_down` is
- incremented.
+ times `acc_down` is incremented by all threads reaches the given value `val`.
+ It also sleeps for `argp->T` microseconds each time `acc_down` is incremented.
 
 (Please see code for details if this description seems confusing.) 
 
