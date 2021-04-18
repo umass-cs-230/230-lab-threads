@@ -26,7 +26,7 @@ are:
 * `count_split`: This function allows the threads to increment `acc_left` and
  `acc_right`, alternating the direction to be incremented across all threads.
  For each thread, the number of times `acc_left` is incremented plus the number
- of times `acc_right` is incremented is given by `argp-N`. It sleeps for
+ of times `acc_right` is incremented is given by `argp->N`. It sleeps for
  `argp->T` microseconds each time `acc_left` or `acc_right is incremented.
 
 * `count_down`: This function increments `acc_down` until the total number of
@@ -42,6 +42,18 @@ the manner described above, so that the changes made by all threads can be
 recorded and race conditions avoided. You do not need to write any other code
 other than inserting `lock();` and `unlock();` lines.
 
+(Please refer to `challenge.c` for the definitions of `lock()` and `unlock()`.)
+
 **Hints:**
 
+1. The following variables get changed across all threads and should therefore
+be protected by semaphores: `acc_up`, `acc_down`, `acc_left`, `acc_right`,
+`dir`, `val`.
 
+2. Threads shouldn't sleep while holding locks, because that would waste the
+time of all the other threads waiting for the lock.
+
+3. Locking and unlocking, like `malloc` and `free`, need to be balanced.
+Every thread that locks eventually needs to unlock; every thread that unlocks
+needs be have acquired a lock prior. Consider all possible paths through
+conditionals and bear this in mind.
